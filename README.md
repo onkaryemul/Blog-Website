@@ -37,8 +37,7 @@ The Blog Website is a web application that allows users to read and publish blog
 
 ## Contributors
 
-- [Your Name](https://github.com/yourusername)
+- Onkar Yemul
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+---
+For more details about the code implementation and routes, refer to the `app.js` file.
