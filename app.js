@@ -21,7 +21,15 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
         useUnifiedTopology: true
     }
 )
-.then(() => { console.log("Connected") })
+.then(() => { 
+    console.log("Database Connected");
+
+    const port = process.env.PORT || 3000;
+    
+    app.listen(port, function() {
+        console.log(`Server started on port ${port}`);
+    });
+})
 .catch((err) => { console.log(err)});
 
 
@@ -122,11 +130,5 @@ app.get("/posts/:postId", async function(req,res) {
     }   
 
 });
-
-
-app.listen(3000, function() {
-    console.log("Server started on port 3000");
-});
-
 
 

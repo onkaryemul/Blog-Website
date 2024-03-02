@@ -4,15 +4,18 @@
     <h1>Home</h1>
     <p> <%= home %> </p>
 
-  <%  allPosts.forEach(function(post) { %>
+    <!-- Button to Compose a Blog -->
+    <a href="/compose" class="btn btn-primary">Compose your own Blog</a>
+
+    <%  allPosts.forEach(function(post) { %>
         <h1> <%= post.title %> </h1>
-    <%   let truncatedContent = post.content.substring(0,100);  %>
+      <% let truncatedContent = post.content.substring(0,100);  %>
         <p> 
               <%= truncatedContent %> ...   
               <a href="/posts/<%=post._id%>"> Read More </a>
               <!-- <a href="/posts/<%=post.title%>"> Read More </a> -->
         </p>
-  <%   }); %>
+    <%   }); %>
 
 <%- include("partials/footer"); -%>
 
